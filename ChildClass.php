@@ -1,19 +1,28 @@
 <?php
-	// this file will extend PArentClass.php
+
+	// this file will extend ParentClass.php
 
 	class ChildClass extends ParentClass {
 
+		private $email;
+
 		// full constructor
-		function __construct() {
-			parent::__construct();
+		public function __construct($name, $email) {
+
+			parent::__construct($name);
+			$this->email = $email;
 
 		}
 
 		// print method
-		function __toString() {
-			parent::__construct();
+		public function __toString() {
+
+			return parent::__toString() .
+						" Thanks for signing up with your email address at: " .
+						$this->email;
 
 		}
+
 
 	} // End of class
 

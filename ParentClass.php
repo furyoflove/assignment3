@@ -5,37 +5,19 @@
 	class ParentClass {
 
 		// Global variables
-		private $name,
-						$email,
-						$id;
+		protected $name;
 
-		// empty class constructor
-		public function __construct() {
-
-			$this->name = "Your name";
-
-		}
-
-		// partial constructor
+		// full constructor
 		public function __construct($name) {
 
 			$this->name = $name;
 
 		}
 
-		// full constructor
-		public function __construct($name, $email, $id) {
-
-			$this->name = $name;
-			$this->email = $email;
-			$this->id = $id;
-
-		}
-
 		//  print method
 		public function __toString() {
 
-			return $this->name;
+			return " Hi " . $this->name . "!";
 
 		}
 
